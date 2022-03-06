@@ -1,7 +1,7 @@
 /* AUTHOR: Austin Stockwell
 		DATE: 2020
         SCOPE: Financial Database
-        
+
         NOTE: The balance was changed to NOT NULL.  This allows
 					the tCredit_Card_Payment TRIGGER to work correctly.
                     If the balance was allows to be NULL and the balance
@@ -36,17 +36,6 @@ CREATE TABLE IF NOT EXISTS `Stockwell_Financial`.`Credit_Card` (
   `credit_limit` DECIMAL(10,2) NULL,
   PRIMARY KEY (`idCredit_Card`))
 ENGINE = InnoDB;
-
--- -----------------------------------------------------
--- INSERT DATA INTO TABLE
--- -----------------------------------------------------
-SELECT * FROM Credit_Card;
-INSERT INTO Credit_Card VALUES (1, 'Austin', 'Sweetwater', 'Music Equipment', 00.00, '2012-01-01', '2020-01-01', 00.00, 4000);
-INSERT INTO Credit_Card VALUES (2, 'Austin', 'Discover', 'Backup Card', 20.99, '2013-01-21', '2021-01-01', 00.00, 8900);
-INSERT INTO Credit_Card VALUES (4, 'Austin', 'Citi', 'DEACTIVATED', 21.99, '2014-01-01', '2020-01-01', 00.00, 2500);
-INSERT INTO Credit_Card VALUES (3, 'Austin', 'CHASE Freedom', 'Personal Expenses', 17.24, '2017-01-01', '2022-01-01', 00.00, 18000);
-INSERT INTO Credit_Card VALUES (5, 'Belle', 'CHASE Freedom', 'Personal Expenses', 25.24, '2016-01-01', '2022-01-01' , 00.00, 16000 );
-SELECT * FROM Credit_Card;
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;

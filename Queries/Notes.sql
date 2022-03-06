@@ -7,6 +7,9 @@ ABOUT: MySQL commands and notes for queries
 -- -----------------------------------------
 -- END TITLE
 -- ----------------------------------------
+/*Updating many rows in a table*/
+UPDATE Credit_Card SET balance = 0 WHERE idCredit_Card IN (1, 2, 3, 4);
+
 /* Delete data from a table */
 DELETE FROM Credit_Transaction
 WHERE idCredit_Transaction = 746;
