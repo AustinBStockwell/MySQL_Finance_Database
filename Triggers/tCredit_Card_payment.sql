@@ -21,7 +21,7 @@ BEGIN
 			UPDATE Credit_Card
             SET balance = balance - NEW.withdrawal
             WHERE Credit_Card.idCredit_Card = NEW.fk_credit_card_ID
-            AND NEW.fk_liability_category_ID = 16;
+            AND NEW.fk_expense_category_ID = 16;
 END;
 $$
 DELIMITER ;

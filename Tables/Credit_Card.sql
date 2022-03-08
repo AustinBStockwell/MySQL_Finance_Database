@@ -1,42 +1,50 @@
-/* AUTHOR: Austin Stockwell
-		DATE: 2020
-        SCOPE: Financial Database
+-- MySQL dump 10.13  Distrib 5.7.19, for macos10.12 (x86_64)
+-- Host: 127.0.0.1    Database: Stockwell_Financial
+-- Server version	5.7.19
+-- Dump completed on 2022-03-08 16:26:44
 
-        NOTE: The balance was changed to NOT NULL.  This allows
-					the tCredit_Card_Payment TRIGGER to work correctly.
-                    If the balance was allows to be NULL and the balance
-                    was paid down to zero, it would create a NULL field in the balance
-                    and no longer work correctly.  Thus, the field is made NOT NULL
-                    so even if the balance is paid to 0.00, it remains 0.00 (not a NULL).
-*/
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=1;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
--- -----------------------------------------------------
--- Schema Stockwell_Financial
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Stockwell_Financial` DEFAULT CHARACTER SET utf8 ;
-USE `Stockwell_Financial` ;
+CREATE DATABASE  IF NOT EXISTS `Stockwell_Financial` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `Stockwell_Financial`;
 
--- -----------------------------------------------------
--- Table `Stockwell_Financial`.`Credit_Card`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `Stockwell_Financial`.`Credit_Card` ;
 
-CREATE TABLE IF NOT EXISTS `Stockwell_Financial`.`Credit_Card` (
-  `idCredit_Card` INT NOT NULL AUTO_INCREMENT,
-  `owner` VARCHAR(50) NULL,
-  `brand` VARCHAR(50) NULL,
-  `description` VARCHAR(100) NULL,
-  `interest_rate` DECIMAL(4,2) NULL,
-  `date_acquired` DATE NULL,
-  `date_expires` DATE NULL,
-  `balance` DECIMAL(10,2) NOT NULL,
-  `credit_limit` DECIMAL(10,2) NULL,
-  PRIMARY KEY (`idCredit_Card`))
-ENGINE = InnoDB;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+--
+-- Table structure for table `Credit_Card`
+--
+
+DROP TABLE IF EXISTS `Credit_Card`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+
+CREATE TABLE `Credit_Card` (
+  `idCredit_Card` int(11) NOT NULL AUTO_INCREMENT,
+  `owner` varchar(50) DEFAULT NULL,
+  `brand` varchar(50) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `interest_rate` decimal(4,2) DEFAULT NULL,
+  `balance` decimal(10,2) DEFAULT NULL,
+  `credit_limit` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`idCredit_Card`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

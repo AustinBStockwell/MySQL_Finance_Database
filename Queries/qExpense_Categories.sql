@@ -14,16 +14,16 @@ USE Stockwell_Financial;
 -- HOW MUCH SPENT ON RENT
 -- ----------------------------------------
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 1
+    fk_expense_category_ID = 1
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
         
         
@@ -32,16 +32,16 @@ WHERE
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 2
+    fk_expense_category_ID = 2
 AND date BETWEEN '2021-05-01' AND '2021-05-31' 
 
 
@@ -50,27 +50,27 @@ AND date BETWEEN '2021-05-01' AND '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 3
+    fk_expense_category_ID = 3
 AND date BETWEEN '2021-05-01' AND '2021-05-31' 
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 3
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 3
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -79,27 +79,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 4
+    fk_expense_category_ID = 4
 AND date BETWEEN '2021-05-01' AND '2021-05-31' 
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 4
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 4
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -108,27 +108,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 5
+    fk_expense_category_ID = 5
         AND date BETWEEN '2021-05-01' AND '2021-05-31'  
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 5
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 5
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -137,27 +137,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 6
+    fk_expense_category_ID = 6
         AND date BETWEEN '2021-05-01' AND '2021-05-31' 
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 6
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 6
 and charge_date between '2021-05-01' and '2021-05-31'
 
         
@@ -166,27 +166,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 7
+    fk_expense_category_ID = 7
         AND date BETWEEN '2021-05-01' AND '2021-05-31' 
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 7
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 7
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -195,27 +195,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 8
+    fk_expense_category_ID = 8
         AND date BETWEEN '2021-05-01' AND '2021-05-31' 
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 8
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 8
 and charge_date between '2021-05-01' and '2021-05-31'
 
         
@@ -224,27 +224,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 9
+    fk_expense_category_ID = 9
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 9
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 9
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -253,27 +253,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 10
+    fk_expense_category_ID = 10
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 10
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 10
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -282,27 +282,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 11
+    fk_expense_category_ID = 11
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 11
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 11
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -311,27 +311,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 12
+    fk_expense_category_ID = 12
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 12
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 12
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -340,27 +340,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 13
+    fk_expense_category_ID = 13
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
         
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 13
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 13
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -369,27 +369,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*),
     SUM(withdrawal) total
 FROM
     Bank_Transaction
         JOIN
-    Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
+    Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
-    fk_liability_category_ID = 14
+    fk_expense_category_ID = 14
         AND date BETWEEN '2021-05-01' AND '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 14
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 14
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -398,24 +398,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 15
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 15
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 15
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 15
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -424,13 +424,13 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 16
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 16
 and date between '2021-05-01' and '2021-05-31'
 
 
@@ -439,24 +439,24 @@ and date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 17
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 17
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 17
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 17
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -465,24 +465,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 18
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 18
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 18
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 18
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -491,24 +491,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 19
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 19
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 19
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 19
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -517,24 +517,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 20
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 20
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 20
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 20
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -543,24 +543,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 21
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 21
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 21
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 21
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -569,24 +569,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 22
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 22
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 22
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 22
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -595,24 +595,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 23
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 23
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 23
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 23
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -621,24 +621,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 24
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 24
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 24
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 24
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -647,24 +647,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 25
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 25
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 25
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 25
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -673,24 +673,24 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 26
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 26
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 26
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 26
 and charge_date between '2021-05-01' and '2021-05-31'
 
 
@@ -699,27 +699,27 @@ and charge_date between '2021-05-01' and '2021-05-31'
 -- ----------------------------------------
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(withdrawal) total
 FROM 
     Bank_Transaction
-JOIN Liability_Category ON Bank_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 100
+JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 100
 and date between '2021-05-01' and '2021-05-31'
 
 UNION 
 SELECT 
-    fk_liability_category_ID,
-    Liability_Category.name,
+    fk_expense_category_ID,
+    Expense_Category.category,
     COUNT(*), SUM(charge) total
 FROM 
     Credit_Transaction
-JOIN Liability_Category ON Credit_Transaction.fk_liability_category_ID = Liability_Category.idLiability_Category
-WHERE fk_liability_category_ID = 100
+JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
+WHERE fk_expense_category_ID = 100
 and charge_date between '2021-05-01' and '2021-05-31'
-ORDER BY fk_liability_category_ID DESC;
+ORDER BY fk_expense_category_ID DESC;
 
 
 /* UNCOMMENT FOR TOTALS */
-/*     ) cool_totals WHERE fk_liability_category_ID NOT IN (16);     */
+/*     ) cool_totals WHERE fk_expense_category_ID NOT IN (16);     */

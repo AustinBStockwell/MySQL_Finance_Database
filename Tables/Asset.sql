@@ -1,42 +1,54 @@
-/* AUTHOR: Austin Stockwell
-		DATE: 2020
-        SCOPE: Financial Database
-*/
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=1;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
--- -----------------------------------------------------
--- Schema Stockwell_Financial
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Stockwell_Financial` DEFAULT CHARACTER SET utf8 ;
-USE `Stockwell_Financial` ;
+-- MySQL dump 10.13  Distrib 5.7.19, for macos10.12 (x86_64)
+-- Host: 127.0.0.1    Database: Stockwell_Financial
+-- Server version	5.7.19
+-- Dump completed on 2022-03-08 16:26:44
 
--- -----------------------------------------------------
--- Table `Stockwell_Financial`.`Asset`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `Stockwell_Financial`.`Asset` ;
 
-CREATE TABLE IF NOT EXISTS `Stockwell_Financial`.`Asset` (
-  `idAsset` INT NOT NULL AUTO_INCREMENT,
-  `fk_asset_category_ID` INT NULL,
-  `owner` VARCHAR(50) NULL,
-  `name` VARCHAR(50) NULL,
-  `description` VARCHAR(100) NULL,
-  `date_acquired` DATE NULL,
-  `purchase_cost` DECIMAL(10,2) NULL,
-  `sell_date` DATE NULL,
-  `sell_price` DECIMAL(10,2) NULL,
+CREATE DATABASE  IF NOT EXISTS `Stockwell_Financial` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `Stockwell_Financial`;
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Asset`
+--
+
+DROP TABLE IF EXISTS `Asset`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+
+CREATE TABLE `Asset` (
+  `idAsset` int(11) NOT NULL AUTO_INCREMENT,
+  `fk_asset_category_ID` int(11) DEFAULT NULL,
+  `owner` varchar(50) DEFAULT NULL,
+  `asset` varchar(50) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `purchase_date` date DEFAULT NULL,
+  `purchase_price` decimal(10,2) DEFAULT NULL,
+  `sell_date` date DEFAULT NULL,
+  `sell_price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`idAsset`),
-  INDEX `fk_asset_category_ID_idx` (`fk_asset_category_ID` ASC),
-  CONSTRAINT `fk_asset_category_ID`
-    FOREIGN KEY (`fk_asset_category_ID`)
-    REFERENCES `Stockwell_Financial`.`Asset_Category` (`idAsset_Category`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
+  KEY `fk_asset_category_ID_idx` (`fk_asset_category_ID`),
+  CONSTRAINT `fk_asset_category_ID` FOREIGN KEY (`fk_asset_category_ID`) REFERENCES `Asset_Category` (`idAsset_Category`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
+/*!40101 SET character_set_client = @saved_cs_client */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
