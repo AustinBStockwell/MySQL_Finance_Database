@@ -24,7 +24,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 1
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
         
         
 -- -----------------------------------------
@@ -42,7 +42,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 2
-AND date BETWEEN '2021-05-01' AND '2021-05-31' 
+AND date BETWEEN '2022-03-01' AND '2022-03-31' 
 
 
 -- -----------------------------------------
@@ -60,7 +60,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 3
-AND date BETWEEN '2021-05-01' AND '2021-05-31' 
+AND date BETWEEN '2022-03-01' AND '2022-03-31' 
 
 UNION 
 SELECT 
@@ -71,7 +71,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 3
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -89,7 +89,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 4
-AND date BETWEEN '2021-05-01' AND '2021-05-31' 
+AND date BETWEEN '2022-03-01' AND '2022-03-31' 
 
 UNION 
 SELECT 
@@ -100,7 +100,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 4
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -118,7 +118,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 5
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'  
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'  
         
 UNION 
 SELECT 
@@ -129,7 +129,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 5
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -147,7 +147,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 6
-        AND date BETWEEN '2021-05-01' AND '2021-05-31' 
+        AND date BETWEEN '2022-03-01' AND '2022-03-31' 
         
 UNION 
 SELECT 
@@ -158,7 +158,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 6
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
         
 -- -----------------------------------------
@@ -176,7 +176,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 7
-        AND date BETWEEN '2021-05-01' AND '2021-05-31' 
+        AND date BETWEEN '2022-03-01' AND '2022-03-31' 
         
 UNION 
 SELECT 
@@ -187,7 +187,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 7
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -205,7 +205,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 8
-        AND date BETWEEN '2021-05-01' AND '2021-05-31' 
+        AND date BETWEEN '2022-03-01' AND '2022-03-31' 
         
 UNION 
 SELECT 
@@ -216,7 +216,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 8
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
         
 -- -----------------------------------------
@@ -234,7 +234,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 9
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
         
 UNION 
 SELECT 
@@ -245,7 +245,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 9
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -263,7 +263,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 10
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
         
 UNION 
 SELECT 
@@ -274,7 +274,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 10
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -292,7 +292,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 11
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
 
 UNION 
 SELECT 
@@ -303,7 +303,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 11
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -321,7 +321,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 12
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
 
 UNION 
 SELECT 
@@ -332,7 +332,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 12
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -350,7 +350,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 13
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
         
 UNION 
 SELECT 
@@ -361,7 +361,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 13
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -379,7 +379,7 @@ FROM
     Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE
     fk_expense_category_ID = 14
-        AND date BETWEEN '2021-05-01' AND '2021-05-31'
+        AND date BETWEEN '2022-03-01' AND '2022-03-31'
 
 UNION 
 SELECT 
@@ -390,7 +390,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 14
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -405,7 +405,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 15
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -416,7 +416,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 15
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -431,7 +431,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 16
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -446,7 +446,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 17
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -457,7 +457,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 17
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -472,7 +472,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 18
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -483,7 +483,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 18
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -498,7 +498,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 19
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -509,7 +509,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 19
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -524,7 +524,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 20
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -535,7 +535,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 20
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -550,7 +550,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 21
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -561,7 +561,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 21
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -576,7 +576,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 22
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -587,7 +587,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 22
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -602,7 +602,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 23
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -613,7 +613,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 23
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -628,7 +628,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 24
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -639,7 +639,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 24
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -654,7 +654,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 25
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -665,7 +665,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 25
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -680,7 +680,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 26
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -691,7 +691,7 @@ FROM
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 26
-and charge_date between '2021-05-01' and '2021-05-31'
+and charge_date between '2022-03-01' and '2022-03-31'
 
 
 -- -----------------------------------------
@@ -706,7 +706,7 @@ FROM
     Bank_Transaction
 JOIN Expense_Category ON Bank_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
 WHERE fk_expense_category_ID = 100
-and date between '2021-05-01' and '2021-05-31'
+and date between '2022-03-01' and '2022-03-31'
 
 UNION 
 SELECT 
@@ -716,8 +716,8 @@ SELECT
 FROM 
     Credit_Transaction
 JOIN Expense_Category ON Credit_Transaction.fk_expense_category_ID = Expense_Category.idExpense_Category
-WHERE fk_expense_category_ID = 100
-and charge_date between '2021-05-01' and '2021-05-31'
+WHERE fk_expense_category_ID = 99
+and charge_date between '2022-03-01' and '2022-03-31'
 ORDER BY fk_expense_category_ID DESC;
 
 
